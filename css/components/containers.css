@@ -17,15 +17,6 @@ fieldset{
     align-items: center;
 }
 
-.container-canvas{
-    width: 300px;
-    height: 300px;
-}
-
-.container-invisible{
+.invisible{
     display: none;
-}
-
-.container-letters-attempted{
-    font-size: 0.7em;
 }

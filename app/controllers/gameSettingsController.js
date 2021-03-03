@@ -3,6 +3,7 @@ class gameSettingsController {
         let $ = document.getElementById.bind(document);
 
         this._gameSetting = $('txt-game-settings');
+        this._nextButton = $('btn-next')
 
         this._text = this._gameSetting.value;
 
@@ -17,6 +18,7 @@ class gameSettingsController {
     start() {
         this._wordList.init(this._text);
         this._gameMainController.init(this._wordList.words);
+        this._nextButton.classList.remove('invisible');
     }
 
 }

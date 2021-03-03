@@ -6,7 +6,7 @@ class GameMainScreenView extends View {
     _template(model) {
         return `
         <div class="container container-game-main">
-            <p id="p-sentence">${model.word}</p>
+            <p id="p-word"><strong>${model.word}</strong></p>
         </div>
         `
     }
