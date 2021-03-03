@@ -1,14 +1,11 @@
 class WordsFactory {
     create(text) {
         let lines = text.split('\n');
-        let words = [];
+        let words = []
+        lines.forEach(word => {
+            if (!(word == undefined)) words.push(new Word(word))
+        })
 
-        for (let i = 0; i < lines.length; i++) {
-            let word = new Word(lines[i]);
-
-            words.push(word);
-        }
-
-        return words
+        return words;
     }
 }

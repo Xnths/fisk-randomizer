@@ -12,12 +12,13 @@ class WordList {
 
         let words = wordsFactory.create(text);
 
-        this._wordList = this._shuffle(words);
+        this._wordList = words;
     }
 
     //Fisher-Yates shuffle algorithm
     _shuffle(array) {
         let currentIndex = array.length, buffer, randomIndex;
+        console.log(array);
 
         while (0 !== currentIndex) {
             randomIndex = Math.floor(Math.random * currentIndex);
@@ -27,6 +28,7 @@ class WordList {
             array[currentIndex] = array[randomIndex];
             array[randomIndex] = buffer;
         }
+        console.log(array)
         return array;
     }
 

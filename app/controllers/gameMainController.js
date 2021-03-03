@@ -10,10 +10,18 @@ class gameMainController {
     }
 
     next() {
-        console.log("oi");
+        this._wordPosition++;
+        console.log(this._wordList, this._wordPosition, this._wordList.length)
+        if (this._wordPosition >= this._wordList.length) {
+            alert("You did every word!");
+            location.reload();
+            return;
+        }
+        this._gameMainScreenView.update(this._wordList[this._wordPosition]);
     }
 
     init(wordList) {
-        this._gameMainScreenView.update(wordList[this._wordPosition]);
+        this._wordList = wordList;
+        this._gameMainScreenView.update(this._wordList[this._wordPosition]);
     }
 }

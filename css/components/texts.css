@@ -21,13 +21,28 @@ strong{
     color: grey;
 }
 
+#p-word strong{
+    color:white;
+}
+
+#p-word strong:hover{
+    color:gray;
+    transition: 500ms color;
+}
+
 p, spam{
     padding: 0.15em 0;
 }
 
-.container-instructions p{
+.instructions{
     font-size: 0.9em;
     font-style: italic;
+    color: grey;
+}
+
+.center{
+    text-align: center;
+    padding: 0.8em;
 }
 
 textarea{
